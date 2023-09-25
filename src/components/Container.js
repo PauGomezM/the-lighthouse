@@ -7,26 +7,27 @@ import WelcomingContent from "./Pages/WelcomingContent";
 
 
 function Container() {
-    const [activeContent, setActiveContent] = useState('welcomingContent');
-    
+  const [activeContent, setActiveContent] = useState('welcomingContent');
 
-    return (
-        <div className="container">
-            <div className="sidebar">
-                <Profile />
-            </div>
-            <div className="pages">
-        <div className="pages-navbar">
-          <h3 className="about-books-header" onClick={() => setActiveContent("aboutBooks")}>About Books</h3>
-          <h3 className="give-advice-header" onClick={() => setActiveContent("giveAdvice")}>Give Advice</h3>
-          <h3 className="quotes-header" onClick={() => setActiveContent("quotes")}>Quotes</h3>
+
+  return (
+    <div className="flex items-top justify-center">
+      <div>
+        <Profile />
+      </div>
+      
+      <div className="w-1/2">
+        <div className="flex flex-row items-top justify-around bg-cyan-950 text-xl font-bold p-3">
+          <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer" onClick={() => setActiveContent("aboutBooks")}>About Books</h3>
+          <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer" onClick={() => setActiveContent("giveAdvice")}>Give Advice</h3>
+          <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer" onClick={() => setActiveContent("quotes")}>Quotes</h3>
         </div>
         {activeContent === "welcomingContent" && <WelcomingContent />}
         {activeContent === "aboutBooks" && <AboutBooks />}
         {activeContent === "giveAdvice" && <GiveAdvice />}
         {activeContent === "quotes" && <Quotes />}
       </div>
-        </div>
-    );
+    </div>
+  );
 }
 export default Container;

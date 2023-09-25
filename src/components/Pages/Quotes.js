@@ -20,20 +20,20 @@ function Quotes() {
 
     };
 
-    const renderedQuotesReviews = quoteCreated.map((quote, index) => <p className="quotes-created" key={index}>{quote}</p>);
+    const renderedQuotesReviews = quoteCreated.map((quote, index) => <p className="" key={index}>{quote}</p>);
 
     const maxCharacterCount = 100;
     
     return (
-        <div className="quotes-content">
+        <div className="bg-cyan-950 flex flex-col p-3">
             <form onSubmit={handleFormSubmit}>
-                <input type="text" placeholder="Type your quote..." value={quoteTyped} onChange={handleChange} maxLength={maxCharacterCount} />
+                <input className="bg-cyan-900 p-1 w-full border rounded-md border-cyan-500" type="text" placeholder="Type your quote..." value={quoteTyped} onChange={handleChange} maxLength={maxCharacterCount} />
             </form>
-            <div className="quotes-submit">
-                <button onClick={handleFormSubmit}>Add quote</button>
+            <div className="flex flex-row items-center justify-between p-1">
+                <button className="px-2 py-1 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm" onClick={handleFormSubmit}>Add quote</button>
                 <p>{maxCharacterCount - quoteTyped.length}</p>
             </div>
-            <div className="quotes-created">{renderedQuotesReviews}</div>
+            <div className="">{renderedQuotesReviews}</div>
         </div>
     );
 }

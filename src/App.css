@@ -1,97 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Lato:wght@300&display=swap');
 
+
 * {
     box-sizing: border-box;
     margin: 0;
     font-family: 'Inclusive Sans', sans-serif;
 }
-:root {
-    --first-color: #1b1b1b;
-    --second-color: #333333;
-    --third-color: #525252;
-    --fourth-color: #23fff4;
-    --fifth-color: #d3d6db;
-    --sixth-color: #f1f1f1;
+
+
+.gradient-text1 {
+    background: linear-gradient(to left, #40c7e8, #0077cc);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
 }
 
-.app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--third-color);
-    height: 100vh;
+.gradient-text2 {
+    background: linear-gradient(to left, #60ff95, #00bb10);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
 }
 
-.navbar {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--second-color);
-    width: 100%;
-    padding: 10px;
-    z-index: 1;
-    color: var(--fourth-color);
-}
-
-.container {
-    display: flex;
-    align-items: top;
-    width: 70%;
-    margin-top: 65px;
-}
-
-.pages {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: top;
-    width: 100%;
-    background-color: var(--first-color);
-    color: var(--sixth-color);
-    padding: 10px;
-    height: max-content;
-    border: var(--fourth-color) solid 1px;
-    border-radius: 8px;
-    box-shadow: var(--fifth-color) 0px 2px 8px 0px;
-}
-
-.pages-navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
-.about-books-header {
-    padding: 5px;
-    background-color: var(--first-color);
-    cursor: pointer;
-}
-
-.give-advice-header {
-    padding: 5px;
-    background-color: var(--first-color);
-    cursor: pointer;
-}
-
-.quotes-header {
-    padding: 5px;
-    background-color: var(--first-color);
-    cursor: pointer;
-}
-
-.sidebar {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin-right: 10px;
-    background-color: var(--second-color);
-    color: var(--fifth-color);
-    border: var(--fourth-color) 1px solid;
-    border-radius: 8px;
-    padding: 10px;
-    height: max-content;
-    box-shadow: var(--fifth-color) 0px 2px 8px 0px;
+.gradient-text3 {
+    background: linear-gradient(to left, #9a5bff, #5300b3);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
 }
