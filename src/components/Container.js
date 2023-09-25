@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import AboutBooks from "./Pages/AboutBooks";
+import AboutBooks from "./Pages/BookReviews";
 import Profile from "./Sidebar/Profile";
-import GiveAdvice from "./Pages/GiveAdvice";
+import GiveAdvice from "./Pages/Knowledge";
 import Quotes from "./Pages/Quotes";
 import WelcomingContent from "./Pages/WelcomingContent";
 
@@ -11,15 +11,15 @@ function Container() {
 
 
   return (
-    <div className="flex items-top justify-center">
+    <div className="flex items-top justify-center w-3/4">
       <div>
         <Profile />
       </div>
       
-      <div className="w-1/2">
+      <div className="w-3/4 border border-cyan-400">
         <div className="flex flex-row items-top justify-around bg-cyan-950 text-xl font-bold p-3">
-          <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer" onClick={() => setActiveContent("aboutBooks")}>About Books</h3>
-          <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer" onClick={() => setActiveContent("giveAdvice")}>Give Advice</h3>
+          <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer" onClick={() => setActiveContent("aboutBooks")}>Book Reviews</h3>
+          <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer" onClick={() => setActiveContent("giveAdvice")}>Knowledge</h3>
           <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer" onClick={() => setActiveContent("quotes")}>Quotes</h3>
         </div>
         {activeContent === "welcomingContent" && <WelcomingContent />}

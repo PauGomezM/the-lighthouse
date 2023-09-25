@@ -5,8 +5,12 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Inclusive Sans', sans-serif;
+    
 }
 
+.background-app {
+    background-image: linear-gradient( 86.3deg,  rgba(0,119,182,1) 3.6%, rgba(8,24,68,1) 87.6% );
+}
 
 .gradient-text1 {
     background: linear-gradient(to left, #40c7e8, #0077cc);
@@ -30,4 +34,8 @@
 }
 .nearly-full {
     width: 90%;
+}
+.full-screen {
+
+    height: 100vh;
 }

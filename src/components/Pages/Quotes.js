@@ -30,7 +30,7 @@ function Quotes() {
         <div className="flex items-center justify-center ">
             <p className="flex flex-col bg-cyan-900 border rounded-xl border-cyan-600 text-cyan-100 px-2 py-1 mt-2 break-words nearly-full" key={index}>{quote}</p>
             <button className=" bg-red-950 ml-1 text-red-50 px-3 py-1 rounded-full border border-red-600" onClick={handleDeleteQuote}>X</button>
-        </div> 
+        </div>
     );
 
     const maxCharacterCount = 100;
