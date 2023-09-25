@@ -10,21 +10,24 @@
 
 .gradient-text1 {
     background: linear-gradient(to left, #40c7e8, #0077cc);
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     display: inline-block;
 }
 
 .gradient-text2 {
     background: linear-gradient(to left, #60ff95, #00bb10);
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     display: inline-block;
 }
 
 .gradient-text3 {
     background: linear-gradient(to left, #9a5bff, #5300b3);
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     display: inline-block;
+}
+.nearly-full {
+    width: 90%;
 }
