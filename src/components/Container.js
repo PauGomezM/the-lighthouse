@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AboutBooks from "./Pages/BookReviews";
+import BookReviews from "./Pages/BookReviews";
 import Profile from "./Sidebar/Profile";
 import GiveAdvice from "./Pages/Knowledge";
 import Quotes from "./Pages/Quotes";
@@ -23,7 +23,7 @@ function Container() {
           <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer" onClick={() => setActiveContent("quotes")}>Quotes</h3>
         </div>
         {activeContent === "welcomingContent" && <WelcomingContent />}
-        {activeContent === "aboutBooks" && <AboutBooks />}
+        {activeContent === "aboutBooks" && <BookReviews />}
         {activeContent === "giveAdvice" && <GiveAdvice />}
         {activeContent === "quotes" && <Quotes />}
       </div>
