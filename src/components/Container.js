@@ -15,12 +15,18 @@ function Container() {
       <div>
         <Profile />
       </div>
-      
+
       <div className="w-3/4 border border-cyan-400">
         <div className="flex flex-row items-top justify-around bg-cyan-950 text-xl font-bold p-3">
-          <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer text-2xl" onClick={() => setActiveContent("aboutBooks")}>Book Reviews</h3>
-          <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer text-2xl" onClick={() => setActiveContent("giveAdvice")}>Knowledge</h3>
-          <h3 className="gradient-text1 hover:text-cyan-300 cursor-pointer text-2xl" onClick={() => setActiveContent("quotes")}>Quotes</h3>
+          <h3
+            className="gradient-text1 hover:text-cyan-300 cursor-pointer text-2xl"
+            onClick={() => setActiveContent("aboutBooks")}>Book Reviews</h3>
+          <h3
+            className="gradient-text1 hover:text-cyan-300 cursor-pointer text-2xl"
+            onClick={() => setActiveContent("giveAdvice")}>Knowledge</h3>
+          <h3
+            className="gradient-text1 hover:text-cyan-300 cursor-pointer text-2xl"
+            onClick={() => setActiveContent("quotes")}>Quotes</h3>
         </div>
         {activeContent === "welcomingContent" && <WelcomingContent />}
         {activeContent === "aboutBooks" && <BookReviews />}

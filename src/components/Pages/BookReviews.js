@@ -18,6 +18,7 @@ function BookReviews() {
                 </div>
                 {isAddingReview && <AddBookReview />}
             </div>
+            
         </div>
     );
 }
