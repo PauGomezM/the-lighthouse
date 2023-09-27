@@ -13,21 +13,21 @@
 }
 
 .gradient-text1 {
-  background: linear-gradient(to left, #40c7e8, #0077cc);
+  background: linear-gradient(to left, #83fff9, #00d2ee);
   background-clip: text;
   color: transparent;
   display: inline-block;
 }
 
 .gradient-text2 {
-  background: linear-gradient(to left, #60ff95, #00bb10);
+  background: linear-gradient(to left, #a6ffb9, #08cf72);
   background-clip: text;
   color: transparent;
   display: inline-block;
 }
 
 .gradient-text3 {
-  background: linear-gradient(to left, #9a5bff, #5300b3);
+  background: linear-gradient(to left, #e2c3ff, #a85cff);
   background-clip: text;
   color: transparent;
   display: inline-block;
@@ -43,12 +43,11 @@
 
 .modal {
   position: absolute;
-  top: 10%;
+  top: 20%;
   right: 30%;
   left: 30%;
   width: auto;
   max-height: 70%;
-  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
   display: flex;
@@ -60,12 +59,12 @@
 @media only screen and (max-width: 675px) {
   .modal {
     position: absolute;
-    top: 30%;
+    top: 10%;
     right: 2%;
     left: 2%;
     width: auto;
-    max-height: 300px;
-    height: 100vh;
+    max-height: 500px;
+    height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     display: flex;
@@ -83,7 +82,7 @@
   bottom: 0;
   z-index: 998;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.521);
+  background-color: rgba(0, 0, 0, 0.589);
 }
 
 .scrollable-section {
