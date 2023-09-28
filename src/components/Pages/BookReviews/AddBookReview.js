@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-function AddBookReview() {
+function AddBookReview({ onReviewAdded }) {
     const [bookName, setBookTerm] = useState('');
     const [books, setBooks] = useState([]);
 
@@ -28,6 +28,20 @@ function AddBookReview() {
     const bookClicked = (book) => {
         setSelectedBook(book);
         setBooks([]);
+    }
+    const [reviewText, setReviewText] = useState('');
+
+
+    const addingReview = () => {
+        if (selectedBook === true) {
+            const takeReviewInfo = {
+                thumbnail: selectedBook.volumeInfo.imageLinks?.thumbnail,
+                bookTitle: selectedBook.volumeInfo.title,
+                author: selectedBook.volumeInfo.authors,
+                reviewText: reviewText,
+            }
+            onReviewAdded(takeReviewInfo);
+        };
     }
 
     return (
@@ -74,19 +88,27 @@ function AddBookReview() {
                             />
                             <div>
                                 <h3 className="text-gray-200 text-sm font-bold">{selectedBook.volumeInfo.title}</h3>
-                                <p className="text-cyan-100 text-xs"><span className=" font-bold">Author: </span>{selectedBook.volumeInfo.authors}</p>
+                                <p className="text-cyan-100 text-xs">
+                                    <span className=" font-bold">
+                                        Author:
+                                    </span>{selectedBook.volumeInfo.authors}
+                                </p>
                             </div>
                         </div>
                     )}
                 </div>
                 <div>
-                    <textarea
+                    <textarea value={reviewText}
                         type="text"
                         placeholder="Write your review..."
                         className="w-full p-2 h-32 border rounded-lg border-cyan-300 bg-cyan-200 text-cyan-950">
                     </textarea>
                 </div>
-                <button className="px-2 py-1 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm mt-2 w-28" /*onClick={}*/>Add review</button>
+                <button
+                    className="px-2 py-1 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm mt-2 w-28"
+                    onClick={addingReview}>
+                    Add review
+                </button>
             </div>
         </div>
     );
