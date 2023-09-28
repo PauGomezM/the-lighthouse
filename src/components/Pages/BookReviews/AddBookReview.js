@@ -98,7 +98,7 @@ function AddBookReview({ onReviewAdded }) {
                     )}
                 </div>
                 <div>
-                    <textarea value={reviewText}
+                    <textarea
                         type="text"
                         placeholder="Write your review..."
                         className="w-full p-2 h-32 border rounded-lg border-cyan-300 bg-cyan-200 text-cyan-950">
