@@ -31,9 +31,12 @@ function AddBookReview({ onReviewAdded }) {
     }
     const [reviewText, setReviewText] = useState('');
 
+    const handleReviewText = (event) => {
+        setReviewText(event.target.value);
+    }
 
     const addingReview = () => {
-        if (selectedBook === true) {
+        if (selectedBook) {
             const takeReviewInfo = {
                 thumbnail: selectedBook.volumeInfo.imageLinks?.thumbnail,
                 bookTitle: selectedBook.volumeInfo.title,
@@ -41,8 +44,9 @@ function AddBookReview({ onReviewAdded }) {
                 reviewText: reviewText,
             }
             onReviewAdded(takeReviewInfo);
-        };
+        }
     }
+    const maxCharacterCountTextarea = 500;
 
     return (
         <div className="modal-blur">
@@ -99,10 +103,14 @@ function AddBookReview({ onReviewAdded }) {
                 </div>
                 <div>
                     <textarea
+                        maxLength={maxCharacterCountTextarea}
+                        value={reviewText}
+                        onChange={handleReviewText}
                         type="text"
                         placeholder="Write your review..."
                         className="w-full p-2 h-32 border rounded-lg border-cyan-300 bg-cyan-200 text-cyan-950">
                     </textarea>
+                    <p className=" text-gray-400">Max characters: {maxCharacterCountTextarea - reviewText.length}</p>
                 </div>
                 <button
                     className="px-2 py-1 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm mt-2 w-28"

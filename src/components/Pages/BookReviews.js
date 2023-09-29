@@ -26,17 +26,22 @@ function BookReviews() {
                 {isAddingReview && <AddBookReview onReviewAdded={handleReviewAdded} />}
             </div>
             <div>
-                {feedReview.map((feedReview, index) => (
-                    <div>
+                {feedReview.map((review, index) => (
+                    <div className='flex mt-3 p-1 max-w-full' key={index}>
                         <img
-                            className=" h-16 mr-3"
-                            src={feedReview.volumeInfo.imageLinks?.thumbnail}
-                            alt={`Thumbnail for ${feedReview.volumeInfo.title}`}
+                            className=" h-20 mr-3"
+                            src={review.thumbnail}
+                            alt={`Thumbnail for ${review.bookTitle}`}
                         />
-                        <h3>{feedReview.selectedBook.volumeInfo.title}</h3>
-                        <p>{feedReview.volumeInfo.authors}</p>
-                        <p>{feedReview.reviewText}</p>
-                    </div>))}
+                        <div className=' text-cyan-500'>
+                            <h3 className=' font-bold w-40'>{review.bookTitle}</h3>
+                            <p>{review.author}</p>
+                        </div>
+                        <div className=' ml-4 border border-green-500 p-2 max-w-full w-full overflow-auto'>
+                            <p className=' text-cyan-200'>{review.reviewText}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
