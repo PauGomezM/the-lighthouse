@@ -20,7 +20,7 @@
 }
 
 .gradient-text2 {
-  background: linear-gradient(to left, #a6ffb9, #08cf72);
+  background: linear-gradient(to left, #a6ffb9, #03c56b);
   background-clip: text;
   color: transparent;
   display: inline-block;
