@@ -46,7 +46,7 @@ function AddBookReview({ onReviewAdded }) {
             onReviewAdded(takeReviewInfo);
         }
     }
-    const maxCharacterCountTextarea = 500;
+    const maxCharacterCountTextarea = 600;
 
     return (
         <div className="modal-blur">
